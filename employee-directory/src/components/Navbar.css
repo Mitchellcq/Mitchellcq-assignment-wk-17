@@ -16,8 +16,8 @@
 
 .navbar{
     display: flex;
-    background-color: blue;
-    color: white;
+    background-color: rgb(89, 136, 189);
+    color: rgb(255, 255, 255);
     justify-content: space-between;
     align-items: center;
     padding: 10px 5px 10px 5px;
