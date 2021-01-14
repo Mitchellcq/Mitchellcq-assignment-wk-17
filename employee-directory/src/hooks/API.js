@@ -34,6 +34,12 @@ export function useGet(url) {
             case "userName":
                 sortByUserName()
                 break
+            case "gender":
+                sortByGender()
+                break
+            case "email":
+                sortByEmail()
+                break
             case "age":
                 sortByAge()
                 break
@@ -65,7 +71,7 @@ export function useGet(url) {
         })
         setDisplayedEmployees([...employees])
     }
-
+    //username
     function sortByUserName() {
         employees.sort(function (a, b) {
             if (a.login.username < b.login.username) {
@@ -76,8 +82,29 @@ export function useGet(url) {
         })
         setDisplayedEmployees([...employees])
     }
-
-    // sorts the employees based on age.
+    //gender
+    function sortByGender() {
+        employees.sort(function (a, b) {
+            if (a.gender < b.gender) {
+                return -1;
+            } else {
+                return 1;
+            }
+        })
+        setDisplayedEmployees([...employees])
+    }
+    //email
+    function sortByEmail() {
+        employees.sort(function (a, b) {
+            if (a.email < b.email) {
+                return -1;
+            } else {
+                return 1;
+            }
+        })
+        setDisplayedEmployees([...employees])
+    }
+    //age
     function sortByAge() {
         employees.sort(function (a, b) {
             return (a.dob.age - b.dob.age)
